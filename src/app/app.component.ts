@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   userName = '';
 
+  textChange = false;
 
   onReset() {
     console.log('111');
     this.userName = '';
+  }
+
+  createText() {
+    console.log('successful');
+    this.textChange = true;
+
   }
 }
