@@ -14,9 +14,9 @@
       <p>{{ userName }}</p>
 
       <button class="btn btn-primary" [disabled]=" userName === '' " (click)=" onReset() ">Reset User</button>
-      <br><br>
-      <button class="btn btn-success" (click)="createText()"
-      [disabled]=" userName === '' ">Create Text</button>
+      <br>
+      <br>
+      <button class="btn btn-success" (click)="createText()" [disabled]=" userName === '' ">Create Text</button>
 
       <p *ngIf="textChange; else noEvent">
         Event create successfully!!!
@@ -25,11 +25,11 @@
       <ng-template #noEvent>
         <p>No event else statement is created successfully</p>
       </ng-template>
-      <hr>
-      <p>
 
+      <p [ngStyle]="{backgroundColor: getColor()}">
+        {{ 'Server' }} with ID {{serverId}} is {{ getServerStatus() }}
       </p>
-      
+
     </div>
   </div>
 </div>
